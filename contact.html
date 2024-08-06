@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+Student Name: Robin Buchler
+File Name: contact.html
+Date: 07/29/2024
+-->
+<html lang="en">
+
+<head>
+    <title>Contact Us - Location | Loans by David</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loans by David can help you with any of your mortgage needs. With low interest rates and zero fees, contact us today to learn more.">    
+    <link rel="stylesheet" href="css/styles_logo.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192x192.png">
+</head>
+
+<body>
+    <!-- Skip to Content Link -->
+    <a class="skip" href="#content">Skip to Content</a>
+    
+    <!-- Header Section -->
+    <header>
+        <div id="logo-container">
+            <a href="index.html">
+                <img src="images/logo_transparent.png" alt="Company Logo" class="logo">
+            </a>
+        </div>
+        <div class="header-content">
+            <h1>Welcome to Loans by David</h1>
+            <div class="profile-container">
+                <img src="images/david.jpg" alt="David's Photo" class="profile">
+                <h4>NMLS# 2446903</h4>
+            </div>              
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <div id="menu-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Information</a>
+        </div>
+        <a class="menu-icon" onclick="hamburger()">
+            <div>&#9776;</div>
+        </a>
+    </nav>
+    
+    <!-- Tablet and Desktop Navigation -->
+    <nav class="tablet-desktop">        
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Information</a></li>
+        </ul>        
+    </nav>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="intro" class="hero">
+            <h2>Your Trusted Mortgage Broker</h2>
+            <p>We help you find the best mortgage solutions tailored to your needs.</p>
+            <a href="mailto:dave@zpmloans.com" class="button">Direct Email</a>
+            <div class="contact-info">
+                <button class="contact-option call-me">Call or Text!</button>
+                <a href="tel:3039098586" class="button tel-link">
+                    <span class="phone-container">
+                        <img src="images/icons8-phone-message-48.png" alt="Phone Icon" class="phone-icon">
+                        <span class="phone-number">(303) 909-8586</span>
+                    </span>
+                </a>
+            </div>
+            <div class="button-container">
+                <a href="https://1216108.my1003app.com/2446903/register?time=1707353279676" class="btn submit-application" target="_blank">
+                    <img src="images/icons8-application-50.png" alt="App Icon">Submit an Application
+                </a>
+                <a href="images/contact.vcf" download="contact.vcf" class="btn save-contact">
+                    <img src="images/icons8-contact-48.png" alt="Contact Icon"> Save My Contact!
+                </a>
+            </div>
+            
+        </section>
+        
+        <!-- Contact Form Section -->
+        <section id="description">
+            <div id="form">
+                <h2 class="center-heading">Complete the Form Below and We Will Contact You Soon</h2>
+                <form id="contactForm" class="form-grid">
+                    <!-- Customer Information -->
+                    <fieldset>
+                        <legend>Customer Information</legend>
+                        <label for="fName">First Name:</label>
+                        <input type="text" name="fName" id="fName" required>
+                        
+                        <label for="lName">Last Name:</label>
+                        <input type="text" name="lName" id="lName" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </fieldset>
+                    
+                    <!-- Additional Information -->
+                    <fieldset>
+                        <legend>Additional Information</legend>
+                        <p>I would like more information about:</p>
+                        <label for="purchase">
+                            <input type="checkbox" name="interest" id="purchase" value="Purchase"> Loan for a Purchase
+                        </label>
+                        <label for="refinance">
+                            <input type="checkbox" name="interest" id="refinance" value="Refinance"> Loan for Refinance
+                        </label>
+                    </fieldset>
+                    
+                    <!-- Referral Source -->
+                    <fieldset>
+                        <legend>Referral Source</legend>
+                        <label for="reference">How did you find us?</label>
+                        <select name="reference" id="reference">
+                            <option value="ad">Advertisement</option>
+                            <option value="friend">Friend</option>
+                            <option value="google">Google</option>
+                            <option value="social">Social Media</option>
+                            <option value="other">Other</option>
+                        </select>
+                        
+                        <label for="questions">Questions?</label>
+                        <textarea id="questions" name="questions" rows="5" cols="35"></textarea>
+                    </fieldset>
+                    
+                    <button type="submit" id="submit" class="button">Submit</button>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 David's Loan Services. All rights reserved.</p>
+        <p><a href="mailto:dave@zpmloans.com">dave@zpmloans.com</a></p>
+        <p class="credit">
+            Icons created using: 
+            <a target="_blank" href="https://icons8.com/icon/nsku6iy2BhjV/phone-message">Icons8</a>
+        </p>
+        <!-- Future Social Media Links -->
+        <div class="social">
+            <a href="https://www.facebook.com/loansbydave" target="_blank"><img src="images/facebook-logo.png" alt="Facebook Logo"></a>
+            <a href="https://www.twitter.com/loansbydave" target="_blank"><img src="images/twitter-logo.png" alt="Twitter Logo"></a>
+        </div>
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

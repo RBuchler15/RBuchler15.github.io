@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--Student Name: Robin Buchler
+    File Name: about.html
+    Date: 07/29/2024
+-->
+<html lang="en">
+<head>
+    <title>Full Service Broker | Loans by David</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Loans by David is here to help you whether it is to purchase a home or refinance your current mortgage. We are here to help.">
+    <link rel="stylesheet" href="css/styles_logo.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" type="images/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192x192.png">
+</head>
+<body>
+    <!-- Skip to Content Link for accessibility -->
+    <a class="skip" href="#content">Skip to Content</a>
+    
+    <header>
+        <!-- Logo Container -->
+        <div id="logo-container">
+            <a href="index.html">
+                <img src="images/logo_transparent.png" alt="Company Logo" class="logo">
+            </a>
+        </div>
+        <!-- Header Content -->
+        <div class="header-content">
+            <h1>Welcome to Loan's By David</h1>
+            <div class="profile-container">
+                <img src="images/david.jpg" alt="David's Photo" class="profile">
+                <h4>NMLS# 2446903</h4>
+            </div>              
+        </div>
+    </header>
+
+    <!-- Navigation Section -->
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav">
+        <div id="menu-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Information</a>
+        </div>
+        <a class="menu-icon" onclick="hamburger()">
+            <div>&#9776;</div>
+        </a>
+    </nav>
+    
+    <!-- Tablet, Desktop Nav -->
+    <nav class="tablet-desktop">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Information</a></li>
+        </ul>        
+    </nav>
+      
+    <main>  
+        <!-- Description Section -->
+        <section id="description">
+            <h4>Our Team</h4>
+            <p>Meet the dedicated professionals who make Loans by David exceptional. Led by our founder and mortgage specialist, David Martinez, our company combines decades of expertise in real estate appraising and mortgage brokerage.</p>
+            <dl>
+                <dt>David Martinez, Founder & Mortgage Specialist</dt>
+                <dd>With over 20 years of experience in real estate appraising, David brings a deep understanding of property values and market dynamics to Loans by David. His commitment to personalized service ensures that every client receives expert guidance tailored to their unique needs.</dd>
+                <dt>Robin Martinez, Client Relations Manager</dt>
+                <dd>Robin ensures that every client receives the highest level of service, from initial consultation to closing, fostering lasting relationships built on trust and transparency.</dd>
+            </dl>
+            <p>Core Values</p>
+            <p>At Loans by David, our core values of integrity, transparency, and client-centricity guide everything we do. We believe in providing honest advice, clear communication, and solutions that align with your long-term financial goals.</p>
+        </section>
+        
+        <!-- Hero Section -->
+        <section id="intro" class="hero">
+            <h2>Your Trusted Mortgage Broker</h2>
+            <p>We help you find the best mortgage solutions tailored to your needs.</p>
+            <a href="mailto:dave@zpmloans.com" class="button">Email</a>
+            <div class="contact-info">
+                <button class="contact-option call-me">Call or Text!</button>
+                <a href="tel:3039098586" class="button tel-link">
+                    <span class="phone-container">
+                        <img src="images/icons8-phone-message-48.png" alt="Phone Icon" class="phone-icon">
+                        <span class="phone-number">(303) 909-8586</span>
+                    </span>
+                </a>
+            </div>
+            <div class="button-container">
+                <a href="https://1216108.my1003app.com/2446903/register?time=1707353279676" class="btn submit-application" target="_blank">
+                    <img src="images/icons8-application-50.png" alt="App Icon">Submit an Application
+                </a>
+                <a href="images/contact.vcf" download="contact.vcf" class="btn save-contact">
+                    <img src="images/icons8-contact-48.png" alt="Contact Icon"> Save My Contact!
+                </a>
+            </div>
+            
+        </section>       
+        
+
+        <section class="rates-calculator-container">
+            <!-- Rates Section -->
+            <div id="rates">
+                <h3>Current Rates:</h3>
+                <a href="https://www.usbank.com/home-loans/mortgage/mortgage-rates.html" target="_blank" class="rates-button">Check Current Mortgage Rates</a>
+                <h6>Your rate is not guaranteed until we lock it so call now!</h6>
+            </div>
+        
+            <!-- Mortgage Calculator Section -->
+            <div id="mortgage-calculator">
+                <h2>Mortgage Calculator</h2>
+                <form id="calculator-form">
+                    <label for="loan-amount">Loan Amount:</label>
+                    <input type="number" id="loan-amount" name="loan-amount" required>
+        
+                    <label for="interest-rate">Interest Rate (%):</label>
+                    <input type="number" id="interest-rate" name="interest-rate" step="0.01" required>
+        
+                    <label for="loan-term">Loan Term (years):</label>
+                    <input type="number" id="loan-term" name="loan-term" required>
+        
+                    <div class="button-container">
+                        <button type="button" onclick="calculateMortgage()">Calculate</button>
+                        <button type="button" onclick="clearForm()">Clear</button>
+                    </div>
+                </form>
+                <div id="results">
+                    <h3>Monthly Payment: $0.00</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 David's Loan Services. All rights reserved.</p>
+        <p><a href="mailto:dave@zpmloans.com">dave@zpmloans.com</a></p>
+        <p class="credit">Icons created using: <a target="_blank" href="https://icons8.com">Icons8</a></p>
+        <!-- Future Social Media Links -->
+        <div class="social">
+            <a href="https://www.facebook.com/loansbydave" target="_blank"><img src="images/facebook-logo.png" alt="Facebook logo"></a>
+            <a href="https://www.twitter.com/loansbydave" target="_blank"><img src="images/twitter-logo.png" alt="Twitter logo"></a>
+        </div> 
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>

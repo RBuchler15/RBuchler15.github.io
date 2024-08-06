@@ -1,0 +1,688 @@
+/* Student Name: Robin Buchler
+   File Name: index.html
+   Date: 07/29/2024
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, h4, div, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 100%;
+    list-style: none;
+    text-decoration: none;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    min-height: 100%;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style rules for skip navigation link */
+.skip {
+    position: absolute;
+    left: -999px;
+}
+
+.skip:focus {
+    color: #fff;
+    background-color: #2a1f14;
+    text-decoration: none;
+    padding: 0.5%;
+    top: auto;
+    left: auto;
+    right: 1px;
+    z-index: 1;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(#ccc, #757a8f);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5%;
+    width: 100%;
+}
+
+.logo-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.logo {
+    width: 40%; /* Adjust width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.header-content {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center h1 */
+    position: relative;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.header-content h1 {
+    font-size: 42px;
+    margin: 0 auto;
+}
+
+.profile-container {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column; /* Stack image and h4 vertically */
+    align-items: center;
+    text-align: center;
+}
+
+.profile {
+    width: 250px; /* Adjust width of the profile image */
+    max-width: 150px;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px;
+}
+
+.contact-option {
+    animation: pulse 4s infinite;
+}
+
+.header-content h4 {
+    margin: 0; /* Reset margin */
+    font-size: 14px;
+}
+
+#menu-links, .menu-icon {
+    display: none;
+}
+
+/* Navigation styles */
+nav {
+    background-color: black;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center; /* Center align navigation items */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0.5%;
+    padding: 0.5em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 0.5em 1em;
+}
+
+nav li a:hover {
+    color: #fff;
+    background-color: grey;
+    padding: 0.5em 1em;
+}
+
+/* Intro section styles */
+#intro {
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(170, 177, 201, 0.932);
+    color: rgb(27, 27, 95); /* Set text color to white for contrast */
+}
+
+.hero {
+    width: 100%;
+    background-image: url('../images/hero.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h2, .hero p {
+    margin: 10px 0;
+}
+
+.hero .button, .hero .contact-info, .hero .button-container {
+    margin: 10px 0;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-flex; /* Use flexbox for consistent button alignment */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px;
+    margin: 4px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.submit-application, .save-contact {
+    background-color: white;
+    color: #2f312f;
+    border: 2px solid #0a1533;
+    /* Adjust specific styles for each button if needed */
+}
+
+.submit-application img, .save-contact img {
+    margin-right: 8px;
+    height: 30px; /* Ensure consistent height */
+    width: auto;
+}
+
+.submit-application:hover, .save-contact:hover {
+    background-color: rgb(187, 183, 183); /* Optional: change background on hover */
+}
+
+
+/* Grid layout for services section */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    gap: 20px; /* Adjust gap as needed */
+    margin-top: 20px; /* Add some spacing above the grid */
+    margin-bottom: 40px; /* Add spacing below the grid to separate from next h4 */
+}
+
+.services-grid div {
+    background-color: #fff; /* Optional: add background color for each item */
+    padding: 10px; /* Optional: add padding inside each item */
+    border: 1px solid #ccc; /* Optional: add border around each item */
+    border-radius: 5px; /* Optional: round the corners */
+}
+
+/* Contact information styles */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between the button and the phone number */
+    margin-top: 10px; /* Add some space above the contact-info section */
+}
+
+.tel-link {
+    display: flex;
+    align-items: center;
+    background-color: rgb(155, 173, 189); /* Matches header background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Adjust padding as needed */
+    border-radius: 5px; /* Adjust border-radius for rounded corners */
+    text-decoration: none;
+    border: 1px solid #ccc; /* Adjust border color as needed */
+}
+
+.phone-icon {
+    margin-right: 8px; /* Adjust space between icon and text */
+    height: 28px; /* Adjust the height of the phone icon if needed */
+    width: auto;
+    vertical-align: middle; /* Ensure vertical alignment */
+}
+
+.contact-option {
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 1.5em;
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.contact-option img {
+    margin-right: 8px;
+    vertical-align: middle;
+    height: 20px; /* Adjust the height of the icons */
+    width: auto;
+}
+
+.button-container a {
+    text-decoration: none;
+}
+
+.save-contact img, .submit-application img {
+    margin-right: 8px;
+    vertical-align: middle;
+    height: 30px; /* Adjust the height of the icons */
+}
+
+#description {
+    background: linear-gradient(#9298a8, #fff);
+    background-color: #f2f2f2;
+    padding: 1% 1%;
+    color: black;
+}
+
+.services-grid, .why-choose-column {
+    background: linear-gradient(#15152b, #fff);
+    background-color: #f2f2f2;
+    padding: 1% 2%;
+    color: black;
+}
+
+#description dt {
+    font-weight: bold;
+    padding: 0.5%;
+}
+
+#description dd {
+    padding: 1% 1% 1% 0;
+}
+
+.description-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.service-image, #description img {
+    width: 20%;
+    max-width: none;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+.services-content {
+    flex: 1;
+}
+
+.why-choose-container h4 {
+    margin-bottom: 20px; /* Add space between the heading and the first item */
+}
+
+.why-choose-flex {
+    display: flex;
+    align-items: flex-start;
+}
+
+.why-choose-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.why-choose-column div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.why-choose-column dt {
+    font-weight: bold;
+}
+
+.why-choose-column dd {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.why-choose-image {
+    max-width: 20%; /* Adjust the size as needed */
+}
+
+.button {
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 5px 20px;
+    background-color: rgb(155, 173, 189); /* Matches header background */
+    color: white; /* White text */
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.button:hover { 
+    background-color: gray;
+    padding: 5px 20px; /* Optional: Maintain padding on hover if needed */
+}
+
+
+/* Style the contact form */
+.center-heading {
+    text-align: center; /* Center-aligns text */
+    margin-bottom: 20px; /* Optional: add some space below the heading */
+}
+
+#contactForm {
+    max-width: 800px; /* Restricts form width to 800px */
+    margin: 20px auto; /* Centers the form horizontally */
+    background-color: #fff; /* White background for the form */
+    padding: 30px; /* Adds padding inside the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-sizing: border-box; /* Ensures padding and border are included in total width/height */
+}
+
+#contactForm input, #contactForm textarea {
+    width: 100%; /* Ensures inputs and textarea take full width of container */
+    padding: 15px; /* Adds space inside inputs/textarea */
+    margin: 10px 0; /* Space between form elements */
+    border: 1px solid #ddd; /* Light border around inputs/textarea */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-sizing: border-box; /* Ensures padding and border are included in total width/height */
+}
+
+#contactForm button {
+    width: 100%; /* Full width */
+    padding: 15px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #98a2bb; /* Default background color */
+    color: #fff; /* Text color */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-sizing: border-box; /* Include padding and border in width/height */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+#contactForm button:hover {
+    background-color: #13072e; /* Background color on hover */
+}
+
+/* Rates and Calculator Container */
+.rates-calculator-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust spacing between sections as needed */
+    margin: 20px auto;
+    max-width: 1000px; /* Adjust as needed for your layout */
+    padding: 0 20px; /* Optional: add padding if needed */
+}
+
+/* Current Rates Section */
+.rates {
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.rates-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7c96b3;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rates-button:hover {
+    background-color: #0056b3;
+}
+
+/* Mortgage Calculator Section */
+#mortgage-calculator {
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin-top: 0; /* Reset margin-top to align with #rates section */
+}
+
+#calculator-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#calculator-form label {
+    margin: 10px 0 5px;
+}
+
+#calculator-form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+#results h3 {
+    margin: 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container button {
+    padding: 10px;
+    background-color: #7c96b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    margin: 5px;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Basic styles for the mobile navigation */
+.mobile-nav {
+    display: none; /* Hidden by default, shown on mobile */
+    position: relative;
+}
+
+.menu-icon {
+    display: block; /* Show the hamburger icon on mobile */
+    cursor: pointer;
+    font-size: 30px;
+    color: white; /* Adjust color as needed */
+    padding: 10px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.menu-icon div {
+    background-color: white; /* Hamburger lines color */
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+/* Mobile menu links styles */
+#menu-links {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 60px; /* Adjust based on your header height */
+    left: 0;
+    width: 100%;
+    background-color: black; /* Match your navigation color */
+    text-align: center;
+}
+
+#menu-links a {
+    display: block;
+    padding: 15px;
+    color: white; /* Link color */
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: 1px solid #333; /* Optional: separator line */
+}
+
+#menu-links a:hover {
+    background-color: #555; /* Hover effect */
+}
+
+/* Show menu links when active */
+#menu-links.active {
+    display: block;
+}
+
+/* Rotate hamburger lines into a cross when active */
+.menu-icon.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #66666e; /* Set background color */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Ensure the footer is pushed to the bottom */
+    width: 100%;
+}
+
+/* Target all links within the footer */
+footer a {
+    color: #fff; /* White color */
+    text-decoration: none; /* Optional: remove underline */
+}
+
+/* Optional: Change color on hover */
+footer a:hover {
+    color: #ccc; /* Light gray color or any other color for hover effect */
+}
+
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {    
+        .tablet-desktop {
+            display: none; /* Hide desktop navigation on mobile */
+        }
+    
+        .mobile-nav {
+            display: block;
+        }
+    .header-content {
+        flex-direction: column;
+    }
+
+    .logo-container, .profile-container {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .profile-container {
+        margin: 0 auto;
+    }
+
+    .header-content h1 {
+        font-size: 24px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+
+    .why-choose-flex {
+        flex-direction: column;
+    }
+
+    .hero {
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .rates-calculator-container {
+        padding: 10px;
+    }
+
+    #rates, #mortgage-calculator {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    #calculator-form label, 
+    #calculator-form input {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #results {
+        text-align: center;
+    }
+    
+    .button {
+        font-size: 1.2em;
+        padding: 10px 0;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 18px;
+    }
+
+    .profile-container {
+        display: block;
+    }
+
+    .profile {
+        width: 150px;
+    }
+
+    .hero h2, .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}

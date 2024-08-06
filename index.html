@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+  Student Name: Robin Buchler
+  File Name: index.html
+  Date: 07/29/2024
+-->
+<html lang="en">
+<head>
+    <title>Mortgage Broker Services | Loans by David</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loans by David is a full service brokerage firm that is dedicated to helping clients achieve their finance goals.">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles_logo.css">
+    <!-- Favicon and Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192x192.png">
+</head>
+<body>
+    <!-- Skip to Content Link -->
+    <a class="skip" href="#content">Skip to Content</a>
+
+    <!-- Header Section -->
+    <header>
+        <div id="logo-container">
+            <a href="index.html">
+                <img src="images/logo_transparent.png" alt="Company Logo" class="logo">
+            </a>
+        </div>
+        <div class="header-content">
+            <h1>Welcome to Loans By David</h1>
+            <div class="profile-container">
+                <img src="images/david.jpg" alt="David's Photo" class="profile">
+                <h4>NMLS# 2446903</h4>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <div id="menu-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Information</a>
+        </div>
+        <a class="menu-icon" onclick="hamburger()">
+            <div>&#9776;</div>
+        </a>
+    </nav>
+
+    <!-- Tablet and Desktop Navigation -->
+    <nav class="tablet-desktop">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Information</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section id="intro" class="hero">
+            <h2>Your Trusted Mortgage Broker</h2>
+            <p>We help you find the best mortgage solutions tailored to your needs.</p>
+            <a href="mailto:dave@zpmloans.com" class="button">Email</a>
+            <div class="contact-info">
+                <button class="contact-option call-me"> Call or Text!</button>
+                <a href="tel:3039098586" class="button tel-link">
+                    <span class="phone-container">
+                        <img src="images/icons8-phone-message-48.png" alt="Phone Icon" class="phone-icon">
+                        <span class="phone-number">(303) 909-8586</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="button-container">
+                <a href="https://1216108.my1003app.com/2446903/register?time=1707353279676" class="btn submit-application" target="_blank">
+                    <img src="images/icons8-application-50.png" alt="App Icon">Submit an Application
+                </a>
+                <a href="images/contact.vcf" download="contact.vcf" class="btn save-contact">
+                    <img src="images/icons8-contact-48.png" alt="Contact Icon"> Save My Contact!
+                </a>
+            </div>
+            
+            
+        </section>
+
+        <!-- Description Section -->
+        <section id="description">
+            <h2>Why do I need a Mortgage Broker?</h2>
+            <p>A mortgage broker is a go-between who matches borrowers with mortgage lenders. If you're buying a home or refinancing, a broker can help you find the best mortgage for your needs. They work with everyone involved in the lending process, including real estate agents, underwriters, and closing agents.</p>
+            <dl>
+                <dt>Mortgage Broker:</dt>
+                <dd>A mortgage broker matches borrowers with potential lenders and loans. Brokers partner with a variety of lenders, including commercial banks, credit unions, mortgage companies, and other financial institutions, and can work independently or with a brokerage firm.</dd>
+
+                <dt>Mortgage Lender:</dt>
+                <dd>A mortgage lender is the party responsible for providing the funds to the borrower to purchase a home.</dd>
+
+                <dt>Loan Officer:</dt>
+                <dd>A loan officer is employed by a bank, credit union, or other lender and is limited to providing the loan products their employer offers. Generally, loan officers act as the liaison between the institution and the individual borrowers assessing them, providing guidance with the application, etc.; sometimes the terms refer to someone who either authorizes or recommends approval for loans, though technically that’s the job of the underwriter.</dd>
+            </dl>
+        </section>
+
+        <section class="rates-calculator-container">
+            <!-- Rates Section -->
+            <div id="rates">
+                <h3>Current Rates:</h3>
+                <a href="https://www.usbank.com/home-loans/mortgage/mortgage-rates.html" target="_blank" class="rates-button">Check Current Mortgage Rates</a>
+                <h6>Your rate is not guaranteed until we lock it so call now!</h6>
+            </div>
+        
+            <!-- Mortgage Calculator Section -->
+            <div id="mortgage-calculator">
+                <h2>Mortgage Calculator</h2>
+                <form id="calculator-form">
+                    <label for="loan-amount">Loan Amount:</label>
+                    <input type="number" id="loan-amount" name="loan-amount" required>
+        
+                    <label for="interest-rate">Interest Rate (%):</label>
+                    <input type="number" id="interest-rate" name="interest-rate" step="0.01" required>
+        
+                    <label for="loan-term">Loan Term (years):</label>
+                    <input type="number" id="loan-term" name="loan-term" required>
+        
+                    <div class="button-container">
+                        <button type="button" onclick="calculateMortgage()">Calculate</button>
+                        <button type="button" onclick="clearForm()">Clear</button>
+                    </div>
+                </form>
+                <div id="results">
+                    <h3>Monthly Payment: $0.00</h3>
+                </div>
+            </div>
+        </section>
+        
+</main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="copyright">
+            <p>&copy;2024 David's Loan Services. All rights reserved.</p>
+            <p><a href="mailto:dave@zpmloans.com">dave@zpmloans.com</a></p>
+        </div>
+        <p class="credit"><a target="_blank" href="https://icons8.com/icon/nsku6iy2BhjV/phone-message">Icons created using:</a><a target="_blank" href="https://icons8.com">Icons8</a></p>
+        <div class="social">
+            <!-- Future social media links -->
+            <a href="https://www.facebook.com/loansbydave" target="_blank"><img src="images/facebook-logo.png" alt="black and white Facebook logo"></a>
+            <a href="https://www.twitter.com/loansbydave" target="_blank"><img src="images/twitter-logo.png" alt="black and white Twitter logo"></a>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>
